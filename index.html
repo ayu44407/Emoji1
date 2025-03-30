@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Keyboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .emoji-container {
+            font-size: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Emojis</h1>
+    <div class="emoji-container" id="emojiContainer"></div>
+
+    <script>
+        const emojiContainer = document.getElementById('emojiContainer');
+        const emojis = "😀😁😂🤣😃😄😅😆😉😊😋😎😍😘🥰😗😙😚🤗🤩🤔🤨😐😑😶🙄😏😣😥😮🤐😯😪😫😴😌😛😜🤪😝🤗🤔🤭🤫🤥😬🤢🤮🥴🥵🥶😵🤯🤠🥳🥸😎🤓🧐😕😟🙁☹️😮‍💨😯😲😳🥺😦😧😨😰😥😢😭😖😣😞😩😫🥱";
+        for (let emoji of emojis) {
+            let span = document.createElement('span');
+            span.textContent = emoji;
+            emojiContainer.appendChild(span);
+        }
+    </script>
+</body>
+</html>
